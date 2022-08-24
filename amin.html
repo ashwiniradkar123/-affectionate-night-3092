@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <style>
+        button{
+            width: 20%;
+            height: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 500px;
+        }
+        input{
+            width: 20%;
+            height: 30px;
+            display: block;
+            margin-top: 20px;
+            margin-left: 500px;
+        }
+        .image1,.image2,.image3,.image4{
+            margin-left: 20px;
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="title" placeholder="title">
+    <input type="text" id="brand" placeholder="Brand Name">
+    <input type="number" id="price" placeholder="price">
+    <input type="text" id="color" placeholder="colour">
+    <input type="text" id="desc" placeholder="Details">
+    <input type="url" id="rating" placeholder="rating">
+    <input placeholder="ratenum" id="ratnum" type="number">
+    <button onclick="addImage()">Add Image</button>
+    <div id="images"></div>
+    <!-- <button  onclick="submit()">Submit Shoes</button> -->
+    <button onclick="submit1()">Submit at Accessories</button>
+</body>
+</html>
+<script>
+    let get=(id)=>{
+        return document.querySelector(id)
+    }
+    let url1=`http://localhost:3000/Shoes`
+    let url2=`http://localhost:3000/Accessories`
+    let count=0
+    function addImage(){
+        count++
+        let img=document.createElement('input')
+        img.setAttribute('class',`image${count}`)
+        img.type='url'
+        img.style.display='block'
+        img.placeholder=`image${count} url`
+        document.getElementById('images').append(img)
+    }
+
+    // async function submit(){
+    //     // event.preventDefault()
+    //     let productData={
+    //         title:get('#title').value,
+    //         brand:get('#brand').value,
+    //         price:get('#price').value,
+    //         color:get('#color').value,
+    //         productDetails:get('#desc').value,
+    //         rating:get('#rating').value,
+    //         images:{
+    //             image:[]
+    //         }
+    //     }
+    //     for(let i=1;i<=count;i++){
+    //         let img=get(`.image${i}`).value
+    //         productData.images.image.push(img)
+    //     }
+    //     productData=JSON.stringify(productData)
+    //     let res=await fetch (url1,{
+    //         method:'POST',
+    //         body:productData,
+    //         headers:{
+    //             'Content-Type':'application/json'
+    //         }
+    //     })
+    //     console.log(productData)
+    // }
+    async function submit1(){
+        // event.preventDefault()
+        let productData={
+            title:get('#title').value,
+            brand:get('#brand').value,
+            price:get('#price').value,
+            color:get('#color').value,
+            productDetails:get('#desc').value,
+            rating:get('#rating').value,
+            ratingnum:get("#ratenum").value,
+            images:{
+                image:[]
+            }
+        }
+        for(let i=1;i<=count;i++){
+            let img=get(`.image${i}`).value
+            productData.images.image.push(img)
+        }
+        productData=JSON.stringify(productData)
+        let res=await fetch (url2,{
+            method:'POST',
+            body:productData,
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+        console.log(productData)
+    }
+</script>
