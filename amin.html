@@ -23,6 +23,17 @@
             margin-left: 20px;
             width: 90%;
         }
+        select{
+            position: absolute;
+            width: 20%;
+            height: 30px;
+            margin-left: 500px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #ids{
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -32,8 +43,13 @@
     <input type="text" id="color" placeholder="colour">
     <input type="text" id="desc" placeholder="Details">
     <input type="url" id="rating" placeholder="rating">
-    <input placeholder="ratenum" id="ratnum" type="number">
-    <button onclick="addImage()">Add Image</button>
+    <input placeholder="ratenum" id="ratenum" type="number">
+    <input placeholder="Type" id="type" type="text">
+    <select name="" id="ntr">
+        <option value="New">New</option>
+        <option value="Top Rated">Top Rated</option>
+    </select>
+    <button id="ids" onclick="addImage()">Add Image</button>
     <div id="images"></div>
     <!-- <button  onclick="submit()">Submit Shoes</button> -->
     <button onclick="submit1()">Submit at Accessories</button>
@@ -93,6 +109,8 @@
             productDetails:get('#desc').value,
             rating:get('#rating').value,
             ratingnum:get("#ratenum").value,
+            type:get("#type").value,
+            ntr:get("#ntr").value,
             images:{
                 image:[]
             }
