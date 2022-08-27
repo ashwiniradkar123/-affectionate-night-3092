@@ -13,7 +13,7 @@ getdata()
 
 
 const append_shoes=(data)=>{
-    
+   
     let con=document.getElementById("shoe_append")
     con.innerHTML=null
    let count=0
@@ -21,6 +21,10 @@ const append_shoes=(data)=>{
     data.forEach(el=> {
       count++
           let div=document.createElement("div")
+          div.addEventListener("click",function(){
+            localStorage.setItem("masai-product",JSON.stringify(el))
+            window.location.href="basket.html"
+          })
         let one=el.images.image[0]
         let two=el.images.image[1]
           let img=document.createElement("img")
@@ -116,3 +120,22 @@ let sortingfun=async()=>{
     append_shoes(x)
  } 
 }
+
+
+// let filter=async(d)=>{
+
+//    let res =await fetch(`https://anthologie123.herokuapp.com/shoes/?q=${d}`)
+//    let  data=await res.json();
+   
+//    console.log(data)
+   
+//    append_shoes(data)
+   
+// }
+// let trigger=document.getElementById("cat").children
+// for(let el of trigger){
+//    el.addEventListener("click",function(){
+//      var x=this.innerHTML
+//      filter(x)
+//    })
+// }
