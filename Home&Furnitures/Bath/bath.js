@@ -1,6 +1,7 @@
-let url=`http://localhost:3000/gift&candles/?q=Candle Gifts & Sets`
+let url=`http://localhost:3000/homes&furniture/?q=bath`
 let categoryName=document.getElementById('categoryName')
 let categoryQty=document.getElementById('categoryQty')
+
 let sort=(data)=>{
     let x=JSON.parse(localStorage.getItem('data'))
     // let y=x
@@ -33,10 +34,13 @@ async function showData(){
     try {
         let res=await fetch(url)
         let data=await res.json()
-        
-        append(data)
-        categoryName.innerText=`Candles`
+        // append(data)
+        categoryName.innerText=`Bath`
         categoryQty.innerText=`${data.length} products`
+        sort(data)
+        // let abc=data[1].price
+        // console.log(abc)
+        
         // console.log(data)
     } catch (error) {
         console.log(error)
@@ -46,11 +50,12 @@ async function showData(){
 
 // category.innerText=`Gifts `
 function append(data){
+    localStorage.setItem("data",JSON.stringify(data))
     let container=document.getElementById('rightDown')
-    localStorage.setItem('data',JSON.stringify(data))
     container.innerHTML=null
     data.forEach((el)=>{
         let div = document.createElement('div')
+        
         div.addEventListener('click',()=>{
             addData(el)
         })
@@ -68,6 +73,8 @@ function append(data){
         div.append(img,title,price,Color)
         container.append(div)
     })
+
+
 }
 let addData=(data)=>{
     localStorage.setItem('ProductData',JSON.stringify(data))

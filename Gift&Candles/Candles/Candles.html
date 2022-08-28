@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Candles.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <script type="module">
+        import {navimp} from "/navimp.js";
+        let nav=document.getElementById('navbar').innerHTML=navimp()
+    </script>
     <title>Gifts | Anthropologie</title>
 </head>
 <body>
@@ -34,8 +39,8 @@
                 </div>
                 <div id="sort">
                     <label for="">Sort :
-                        <select name="" id="sorting">
-                            <option value="all">Featured</option>
+                        <select onchange="sort()" name="" id="sorting">
+                            <option value="ALL">Featured</option>
                             <option value="LTH">Price Low To High</option>
                             <option value="HTL">Price High To Low</option>
                             <option value="az">A-Z</option>

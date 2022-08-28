@@ -1,14 +1,44 @@
 let url=`http://localhost:3000/gift&candles`
 let categoryName=document.getElementById('categoryName')
 let categoryQty=document.getElementById('categoryQty')
+let sort=(data)=>{
+    let x=JSON.parse(localStorage.getItem('data'))
+    // let y=x
+    // console.log(x)
+    // console.log(abc)
+    let select=document.getElementById('sorting').value;
+    // console.log(select)
+    if(select=="ALL"){
+        append(data)
+        // console.log(abc)
+    }
+    if(select=="LTH"){
+        // showData()
+        x.sort(function(a,b){
+        //     // console.log(x)
+            return a.price-b.price
+            
+        //     // console.log('b.price = ',b.price)
+        })
+        // console.log(abc)
+        append(x)
+    }else if(select=="HTL"){
+      x.sort((a,b)=>{
+        return b.price-a.price
+      })
+      append(x)
+    }
+}
 async function showData(){
     try {
         let res=await fetch(url)
         let data=await res.json()
-        append(data)
+        // append(data)
+        // sort(data)
         categoryName.innerText=`Gifts`
         categoryQty.innerText=`${data.length} products`
-        console.log(data)
+        // console.log(data)
+        sort(data)
     } catch (error) {
         console.log(error)
     }
@@ -18,6 +48,7 @@ async function showData(){
 // category.innerText=`Gifts `
 function append(data){
     let container=document.getElementById('rightDown')
+    localStorage.setItem('data',JSON.stringify(data))
     container.innerHTML=null
     data.forEach((el)=>{
         let div = document.createElement('div')
