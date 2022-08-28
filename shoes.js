@@ -120,20 +120,3 @@ let sortingfun=async()=>{
 }
 
 
-// let filter=async(d)=>{
-
-//    let res =await fetch(`https://anthologie123.herokuapp.com/shoes/?q=${d}`)
-//    let  data=await res.json();
-   
-//    console.log(data)
-   
-//    append_shoes(data)
-   
-// }
-// let trigger=document.getElementById("cat").children
-// for(let el of trigger){
-//    el.addEventListener("click",function(){
-//      var x=this.innerHTML
-//      filter(x)
-//    })
-// }
