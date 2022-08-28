@@ -10,14 +10,16 @@
     letter-spacing: 0.6px;
 }
 #tileview{
-    height:9571.25px;
-    width:1349px;
+    padding-top: 50px;
+    height:fit-content;
+    width:80%;
+    margin: auto;
     /* border:rgb(255,0,0)dashed 1px; */
     display: flex;
     justify-content: space-around;
 }
 #side{
-    height:9571.25px;
+    height:fit-content;
     width:216.172px;
     /* border:rgb(255,0,0)dashed 1px;  */
     padding: 0 20px 0 0;
@@ -154,7 +156,7 @@ width:233.203px;
     justify-content: space-between;
 }
 #product{
-    height:9570.25px;
+    height:fit-content;
     width:992.828px;
     /* border:rgb(255,0,0)dashed 1px; */
     gap:30px;

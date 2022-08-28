@@ -1,4 +1,4 @@
-let url=`http://localhost:3000/homes&furniture/?q=bath`
+let url=`https://anthologie123.herokuapp.com/homes&furniture/?q=bath`
 let categoryName=document.getElementById('categoryName')
 let categoryQty=document.getElementById('categoryQty')
 
@@ -57,8 +57,9 @@ function append(data){
         let div = document.createElement('div')
         
         div.addEventListener('click',()=>{
-            addData(el)
-        })
+            localStorage.setItem('masai-product',JSON.stringify(el))
+            window.location.href="/basket.html"
+          })
         div.setAttribute('class','div')
         let img=document.createElement('img')
         img.src=el.images.image[0]
