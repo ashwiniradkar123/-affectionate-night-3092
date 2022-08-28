@@ -1,27 +1,117 @@
-
 *{
-    margin: 0px;
-    padding: 0px;
+    letter-spacing: 1.2px;
+    outline: none;
 }
-#arr_basket{
-    width: 100%;
-    /* height: 1500px; */
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+#last{
+    margin-left: 419px;
+    margin-top: -7px;
+    width: 46%;
+    height: 40px;
+
+   
 }
-#arr_basket_append{
-    width: 70%;
-    /* border: 1px solid grey; */
-    /* height: 300px; */
+/* #fi{ */
+/* margin-top: -0px; */
+
+/* } */
+#las{
+margin-left: 423px;
+margin-top: -67px;
+/* border-radius: 8px; */
 }
+#selecs{
+width: 45%;
+height: 40px;
+
+/* font-size: 20px; */
+
+}
+#name{
+width: 46%;
+height: 40px;
+position: relative;
+/* position: absolute; */
+/* margin-top: -38px; */
+/* font-size: 20px; */
+/* margin-left: 100px; */
+}
+#address{
+width: 93%;
+height: 40px;
+
+/* font-size: 20px; */
+
+}
+#add12{
+width: 93%;
+height: 40px;
+/* font-size: 20px; */
+
+}
+#box{
+
+height: 40px;
+/* margin-right: 50px; */
+}
+#po{
+margin-top: -30px;
+margin-left: 30px;
+}
+#city{
+width: 46%;
+height: 40px;
+position: relative;
+/* font-size: 20px; */
+}
+#region{
+margin-left: 417px;
+width: 46%;
+    height: 40px;
+ margin-top: -7px;
+    /* font-size: 20px; */
+}
+#regions{
+margin-left: 429px;
+margin-top: -67px;
+}
+#post{
+width: 46%;
+height: 40px;
+/* font-size: 20px; */
+}
+#mobile{
+width: 46%;
+height: 40px;
+
+/* font-size: 20px; */
+}
+#navb{
+
+width: 60%;
+height: auto;
+/* border: 2px solid red; */
+margin-left: 100px;
+
+}
+#sub{
+width: 20%;
+height: 30px;
+margin-left: 20px;
+background-color: red;
+color: black;
+/* font-size: 20px; */
+}
+
+
+
+
 #payment{
+    margin-top: -725px;
     width: 25%;
     /* border: 1px solid green; */
     height: 300px;
-    margin-right: 60px;
-    position: fixed;
-    margin-left: 70%;
+    margin-right: 61px;
+    margin-left: 69%;
 }
 #payment>h2{
     margin-bottom: 10px;

@@ -57,9 +57,6 @@ const append_shoes=(data)=>{
     });
 }
 let sortingfun=()=>{
-    
-    // let res =await fetch(`https://anthologie123.herokuapp.com/accessories`)
-    // let  data=await res.json();
     let x=JSON.parse(localStorage.getItem("sandy"))
     var select=document.getElementById("select-value").value;
     // console.log(select)

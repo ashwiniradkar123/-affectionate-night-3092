@@ -1,6 +1,13 @@
 
-
+// let h=0
 let data_basket=JSON.parse(localStorage.getItem("basket-product")) || []
+console.log(data_basket)
+// let totals=data_basket.reduce(function(count,el){
+   //  return count+Number(el.price)
+// },0)
+// document.getElementById("total_price").innerText=totals
+// console.log(totals)
+
 
 console.log(data_basket)
 data_basket.forEach(el=> {
@@ -36,73 +43,82 @@ data_basket.forEach(el=> {
      let child2=document.createElement("div")
      child2.setAttribute("id","child2")
      let price=document.createElement("p")
-     price.innerText=el.price
+     price.innerText="$"+el.price
 
      child2.append(price)
 
      let child3=document.createElement("div")
      child3.setAttribute("id","child3")
-     let qty=document.createElement("select")
-     qty.addEventListener("change",function(){
-        let a=Number(el.price)
-        let x=Number(qty.value)
-        var s=a*x
-        total.innerText=s
+     let qtys=document.createElement("select")
+     qtys.addEventListener("change",function(){
+        
+      let x=Number(qtys.value)
+      let r=Number(el.price)*x
+      total.innerText=r
+      document.getElementById("total_price").innerText=total.innerText
+      let d=document.getElementById("total_text").innerText=total.innerText
+      localStorage.setItem("p",JSON.stringify(d))
      })
+  
+
+    
      let op1=document.createElement("option")
      op1.innerText="1"
-     qty.add(op1)
+     qtys.add(op1)
      let op2=document.createElement("option")
      op2.innerText="2"
-     qty.add(op2)
+     qtys.add(op2)
      let op3=document.createElement("option")
      op3.innerText="3"
-     qty.add(op3)
+     qtys.add(op3)
      let op4=document.createElement("option")
      op4.innerText="4"
-     qty.add(op4)
+     qtys.add(op4)
      let op5=document.createElement("option")
      op5.innerText="5"
-     qty.add(op5)
+     qtys.add(op5)
      let op6=document.createElement("option")
      op6.innerText="6"
-     qty.add(op6)
+     qtys.add(op6)
      let op7=document.createElement("option")
      op7.innerText="7"
-     qty.add(op7)
+     qtys.add(op7)
      let op8=document.createElement("option")
      op8.innerText="8"
-     qty.add(op8)
+     qtys.add(op8)
      let op9=document.createElement("option")
      op9.innerText="9"
-     qty.add(op9)
+     qtys.add(op9)
      let op10=document.createElement("option")
      op10.innerText="10"
-     qty.add(op10)
+     qtys.add(op10)
      let op11=document.createElement("option")
      op11.innerText="11"
-     qty.add(op11)
+     qtys.add(op11)
      let op12=document.createElement("option")
      op12.innerText="12"
-     qty.add(op12)
+     qtys.add(op12)
      let op13=document.createElement("option")
      op13.innerText="13"
-     qty.add(op13)
+     qtys.add(op13)
      let op14=document.createElement("option")
      op14.innerText="14"
-     qty.add(op14)
+     qtys.add(op14)
      let op15=document.createElement("option")
      op15.innerText="15"
-     qty.add(op15)
+     qtys.add(op15)
     
-     child3.append(qty)
+     child3.append(qtys)
 
      let child4=document.createElement("div")
      child4.setAttribute("id","child4")
 
      let total=document.createElement("p")
-     total.innerText=el.price
+     total.innerText="$"+el.price
+    //  document.getElementById("total_price").innerText="$"+el.price
+     document.getElementById("total_price").innerText=total.innerText
 
+     document.getElementById("total_text").innerText=total.innerText
      let remove=document.createElement("a")
      remove.href="#"
      remove.innerText="Remove"
@@ -118,3 +134,8 @@ data_basket.forEach(el=> {
   con_child.append(child,child1,child2,child3,child4,x)
   con.append(con_child)
 });
+
+
+document.getElementById("checkout_btn").addEventListener("click",function(){
+  window.location.href="payment.html"
+})

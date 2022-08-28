@@ -118,7 +118,7 @@ a{
     margin: auto;
     margin-left: 60px;
     margin-top: -7px;
-
+  cursor: pointer;
 }
 #a_cat>p{
      margin-top: 15px;
@@ -126,6 +126,7 @@ a{
      letter-spacing: 1px;
      font-size: 13px;
      font-family: "Avenir Book",sans-serif;
+     cursor: pointer;
      
 }
 #accessories_filter_cat>p{

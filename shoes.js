@@ -13,7 +13,7 @@ getdata()
 
 
 const append_shoes=(data)=>{
-   
+   localStorage.setItem("sandy",JSON.stringify(data))
     let con=document.getElementById("shoe_append")
     con.innerHTML=null
    let count=0
@@ -58,9 +58,7 @@ const append_shoes=(data)=>{
 }
 let sortingfun=async()=>{
     
-    let res =await fetch(`https://anthologie123.herokuapp.com/shoes`)
-    let  data=await res.json();
-    let x=data
+   let x=JSON.parse(localStorage.getItem("sandy"))
     var select=document.getElementById("select-value").value;
     // console.log(select)
     if(select=="htl"){
