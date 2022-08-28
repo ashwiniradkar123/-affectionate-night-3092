@@ -1,4 +1,4 @@
-let url=`http://localhost:3000/gift&candles`
+let url=`https://anthologie123.herokuapp.com/gift&candles`
 let categoryName=document.getElementById('categoryName')
 let categoryQty=document.getElementById('categoryQty')
 let sort=(data)=>{
@@ -52,9 +52,11 @@ function append(data){
     container.innerHTML=null
     data.forEach((el)=>{
         let div = document.createElement('div')
+        div.style.cursor="pointer"
         div.addEventListener('click',()=>{
-            addData(el)
-        })
+            localStorage.setItem('masai-product',JSON.stringify(el))
+            window.location.href="/basket.html"
+          })
         div.setAttribute('class','div')
         let img=document.createElement('img')
         img.src=el.images.image[0]

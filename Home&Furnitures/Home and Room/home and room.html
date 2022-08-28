@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/d440dbf060.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home and room.css">
@@ -9,6 +10,11 @@
     <script type="module">
         import {navimp} from "/navimp.js";
         let nav=document.getElementById('navbar').innerHTML=navimp()
+    </script>
+    <link rel="stylesheet" href="/footer.css">
+    <script type="module">
+        import {footimp} from "/footimp.js"
+        document.querySelector("#footer").innerHTML=footimp();
     </script>
     <title>Gifts | Anthropologie</title>
 </head>
@@ -57,6 +63,7 @@
             </div>
         </div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 <script src="home and room.js"></script>

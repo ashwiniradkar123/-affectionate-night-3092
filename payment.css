@@ -91,6 +91,8 @@ width: 60%;
 height: auto;
 /* border: 2px solid red; */
 margin-left: 100px;
+margin-bottom: 20px;
+margin-top: 70px;
 
 }
 #sub{
@@ -106,12 +108,13 @@ color: black;
 
 
 #payment{
-    margin-top: -725px;
+    margin-top: -650px;
     width: 25%;
     /* border: 1px solid green; */
     height: 300px;
-    margin-right: 61px;
-    margin-left: 69%;
+    /* margin-right: 61px; */
+    margin-left: 1085px;
+    position: absolute;
 }
 #payment>h2{
     margin-bottom: 10px;
@@ -204,10 +207,7 @@ color: black;
     background-color: #fff;
     border:1px solid  rgb(137, 136, 136);
 }
-#child2{
-    /* border: 1px solid green; */
 
-}
 #child3{
     /* border: 1px solid grey; */
     margin-left: 70px;

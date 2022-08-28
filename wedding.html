@@ -4,9 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/d440dbf060.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/navbar.css">
+    <script type="module">
+        import {navimp} from "/navimp.js";
+        let nav=document.getElementById('navbar').innerHTML=navimp()
+    </script>
+    <link rel="stylesheet" href="/footer.css">
+    <script type="module">
+        import {footimp} from "/footimp.js"
+        document.querySelector("#footer").innerHTML=footimp();
+    </script>
     <link rel="stylesheet" href="wedding.css">
 </head>
 <body>
+    <div id="navbar"></div>
      <div id="content">
         <div id="side">
             <div id="browse"><p>Browse by:</p></div>
@@ -68,6 +80,7 @@
 
         </div>
      </div>
+     <div id="footer"></div>
 </body>
 </html>
 <script src="wedding.js"></script>

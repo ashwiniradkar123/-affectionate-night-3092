@@ -2,16 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/d440dbf060.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthropologie-Clothing</title>
     <link rel = "icon" href = "https://www.bing.com/th?id=ODLS.0051b818-e457-4786-a718-e99406a0d96c&w=32&h=32&o=6&pid=13.1" type = "image/x-icon">
     <link rel="stylesheet" href="/clothing.css">
     <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="/footer.css">
+    <script type="module">
+        import {footimp} from "/footimp.js"
+        document.querySelector("#footer").innerHTML=footimp();
+    </script>
 </head>
 <body>
    
-    <div id="container"></div>
+    <div id="navbar"></div>
     <div id="dress_container">
         <div id="dress_sorting">
             <div id="shoe_browse">Filter by:</div>
@@ -107,12 +113,13 @@
              </div>
         </div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 <script src="/clothing.js"></script>
 <script type="module">
     import {navimp} from "/navimp.js"
-    document.querySelector("#container").innerHTML=navimp();
+    document.querySelector("#navbar").innerHTML=navimp();
   
     
    

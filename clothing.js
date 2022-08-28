@@ -20,6 +20,10 @@ const append_shoes=(data)=>{
     data.forEach(el=> {
       count++
           let div=document.createElement("div")
+          div.addEventListener('click',()=>{
+            localStorage.setItem('masai-product',JSON.stringify(el))
+            window.location.href="/basket.html"
+          })
         let one=el.images.image[0]
         let two=el.images.image[1]
           let img=document.createElement("img")

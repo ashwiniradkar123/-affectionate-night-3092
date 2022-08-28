@@ -44,10 +44,10 @@
 #dress_container{
     /* border: 1px solid red; */
     width: 100%;
-    height: 700px;
+    /* height: 700px; */
     display: flex;
     justify-content: space-between;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 #dress_sorting{
     /* border: 1px solid red; */

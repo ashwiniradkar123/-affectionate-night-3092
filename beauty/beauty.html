@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="/footer.css">
     <script type="module">
         import {footimp} from "/footimp.js"
-        document.getElementById('main').innerHTML=footimp()
+        document.getElementById('footer').innerHTML=footimp()
+    </script>
+    <link rel="stylesheet" href="/navbar.css">
+    <script type="module">
+        import {navimp} from "/navimp.js";
+        let nav=document.getElementById('navbar').innerHTML=navimp()
     </script>
 </head>
 <body>
+    <div id="navbar"></div>
     <!-- <div id="shoes-category">
       <div>
         <div>
@@ -146,7 +152,7 @@
         </div>
         
     </div>
-    <div id="main"></div>
+    <div id="footer"></div>
 </body>
 </html>
 <script src="beauty.js"></script>
