@@ -7,6 +7,11 @@
     <title>Anthropologie/Beauty-wellnes</title>
     <link rel = "icon" href = "https://www.bing.com/th?id=ODLS.0051b818-e457-4786-a718-e99406a0d96c&w=32&h=32&o=6&pid=13.1" type = "image/x-icon">
     <link rel="stylesheet" href="beauty.css">
+    <link rel="stylesheet" href="/footer.css">
+    <script type="module">
+        import {footimp} from "/footimp.js"
+        document.getElementById('main').innerHTML=footimp()
+    </script>
 </head>
 <body>
     <!-- <div id="shoes-category">
@@ -139,7 +144,9 @@
                 
              </div>
         </div>
+        
     </div>
+    <div id="main"></div>
 </body>
 </html>
 <script src="beauty.js"></script>

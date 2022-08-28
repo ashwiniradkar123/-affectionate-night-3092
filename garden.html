@@ -7,8 +7,10 @@
     <title>Anthropologie/Garden&Outdoor</title>
     <link rel = "icon" href = "https://www.bing.com/th?id=ODLS.0051b818-e457-4786-a718-e99406a0d96c&w=32&h=32&o=6&pid=13.1" type = "image/x-icon">
     <link rel="stylesheet" href="garden.css">
+    <link rel="stylesheet" href="/footer.css">
 </head>
 <body>
+  
      <img id="garimg" src="https://images.ctfassets.net/5de70he6op10/1D4rEI4jwM4aNGoKxPacjm/60d585ede668c1b1b6b2320ab3a496e5/081321_AnthroL1Banner_2_large.jpg?w=2882&q=80&fm=webp" alt="">
     <div id="garden_container">
         <div id="garden_sorting">
@@ -105,6 +107,11 @@
              </div>
         </div>
     </div>
+    <div id="main"></div>
 </body>
 </html>
 <script src="garden.js"></script>
+<script type="module">
+    import {footimp} from "/footimp.js"
+    document.querySelector("#main").innerHTML=footimp();
+</script>

@@ -44,7 +44,7 @@
 #beauty_container{
     /* border: 1px solid red; */
     width: 100%;
-    height: 700px;
+    height: fit-content;
     display: flex;
     justify-content: space-between;
 }
@@ -99,6 +99,7 @@
 }
 #beauty_append{
     /* border: 1px solid red; */
+    height: fit-content;
     width: 95%;
     margin-top: 20px;
     display: grid;
