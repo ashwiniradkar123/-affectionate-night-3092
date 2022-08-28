@@ -5,95 +5,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/navbar.css">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-#container{
-  width: 100%;
-  height: 40px;
-/* border: 1px solid rebeccapurple; */
-background-color:rgb(238, 237, 237);
-
-}
-#select{
-  border: none;
-  margin-left: 1000px;
-  color: #167A92;
-}
-#select a{
- text-decoration: underline;
-  
-}
-ui a{
-  color: #167A92;
-  margin-left: 50px;
-  font-size: 10px;
-}
-ui a:hover{
-  color: black;
-}
-#container1{
-  width: 100%;
-  height: 40px;
-  display: flex;
-/* border: 1px solid rebeccapurple; */
-
-}
-#container1 img{
-  width: 80%;
-  height: 40px;
-  display: flex;
-/* border: 1px solid rebeccapurple; */
-color: 1px solid #E5E2DE;
-
-}
-#container1 img:hover{
- 
-color: 1px solid black;
-
-}
-
-#container2{
-  width: 100%;
-  height: 60px;
-border: 1px solid #E5E2DE;
-margin-left: 5px;
-}
-#com{
-  border: 1px solid #E5E2DE;
-  width: 400px;
-  height: 60px;
-  margin-left: 30px;
-  display: flex;
-}
-.git{
-  color: #167A92;
-  size: 10px;
-  height: 60px;
-  width: 400px;
-  
-}
-.line{
-  margin-top: 0px;
- size: 100px;
-}
-#mcontiner{
-  display: flex;
-  gap: 20px;
-  /* border:  1px solid black; */
-  width: 30%;
-  height: 60px;
-}
-#search{
-  height: 50px;
-  margin-left: 600px;
- 
-}
-#logoimg img{
-  width: 90%;
-  height: 70px;
-
-}
 
 </style>
 </head>
@@ -130,14 +41,15 @@ margin-left: 5px;
 
   </select>
   
-  <ui > <a href=""> Sign In/Sign Up</a> <ui/>
+  <ui class="clsis" > <a href=""> Sign In/Sign Up</a> <ui/>
 </div>
 <div id="mcontiner">
 <div id="container1">
   <div id="com">
     <hr class="line">
     <div class="git">
-    <img src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg" alt="">
+      <a class="some" href="">
+    <img src="https://images.ctfassets.net/5de70he6op10/53ZOE4rRqrxcvv0hg2eSLV/a849085e5f600c618132be2475017746/anthro-logo.svg" alt=""></a>
   </div>
  
  <div id="container2" >
@@ -146,9 +58,21 @@ margin-left: 5px;
 
 
 </div>
-
-<input type="text"  placeholder="Search Anthropologie" id="search" ><img src="https://as1.ftcdn.net/v2/jpg/01/97/13/54/1000_F_197135414_Hiy7mFFJQUBDoNm33L7i9sNUUtJNllXs.jpg" alt="">
-<img src="https://cdn-icons-png.flaticon.com/512/2956/2956820.png" alt="">
+<div class="box">
+<table class="elementcontainer">
+  <tr>
+    <td>
+      <input type="text" placeholder=" Search Anthroplogie" class="search">
+    </td>
+    <td>
+      <a href=""> <i class='fa fa-searchfa fa-search'></i></a>
+    </td>
+    
+  </tr>
+</table>
+</div>
+<div>
+<i class='fa-solid fa-bag-shopping'></i></div>
 </div>
 
 </div>
@@ -156,10 +80,22 @@ margin-left: 5px;
 <hr>
 <div id="navbar1">
   <!-- <div id="sidebar1"> -->
-    <ul id="page">
-      <li><a href="">New!</a>
+    <div id="page">
+      <p><a href="">New!</a>
+        <p><a href="">Dresses</a>
+          <p><a href="">Clothing</a>
+            <p><a href="">Shoes</a>
+              <p><a href="">Accessiores</a>
+                <p><a href="">Gift & Candles</a>
+                  <p><a href="">Home & Furniture</a>
+                    <p><a href="">Beauty & Welleness</a>
+                        <p><a href="">Garden and Outdoor</a>
+                          <p><a href="">Wedding</a>
+                            <p><a href="">Sale</a>
+                              </div>
+
         <div id="box"> 
-          <ul id="makeup">
+          <!-- <ul id="makeup">
             <div id="makeup1">
               <li><a href=""><h4>Shop by Category</h4></a></li>
               <hr>
@@ -199,8 +135,8 @@ margin-left: 5px;
             </div>
            
       </div>
-      <li><a href="">Dresses</a>
-        <div id="box"> 
+      <li><a href="dresses.html">Dresses</a>
+        <div id="boxb"> 
           <ul id="makeup">
             <div id="makeup1">
               <li><a href=""><h4>Shop by Category</h4></a></li>
@@ -236,10 +172,10 @@ margin-left: 5px;
             <li><a href="">Little Black Dresses</a></li>
             <li><a href="">Little White Dresses</a></li>
           
-            </div>
-           
+            </div> -->
+<!--            
       </div>
-      <li><a href="">Clothing</a>
+      <li><a href="clothing.html">Clothing</a>
         <div id="box"> 
           <ul id="makeup">
             <div id="makeup1">
@@ -697,12 +633,12 @@ margin-left: 5px;
             <li><a href="">Under $75</a></li>
             <li><a href="">Under $100</a></li>
             </div>
-      </div>
-    </ul>
+      </div> -->
+        </div>
     
   <!-- </div> -->
 
 </div>
-
+<hr>
 </body>
 </html>
