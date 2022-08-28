@@ -5,7 +5,7 @@ var arr=[];
  
  
  async function product(){
-    let url1=`http://localhost:3000/wedding`
+    let url1=`https://anthologie123.herokuapp.com/wedding`
     try{
         let res = await fetch(url1);
         let data =await res.json()
