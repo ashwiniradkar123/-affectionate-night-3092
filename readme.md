@@ -1,7 +1,11 @@
-ANTHROPOLOGIE
+## ANTHROPOLOGIE
 
 Athropologie.com is an e-commerce web application that widely provides Ladies Clothes , Accosseries, Cosmetic service all across america 
 and in this project we have tried to make a replica of this web application.
+
+HOME PAGE:-
+![Screenshot (231)](https://user-images.githubusercontent.com/103120032/214495971-72b57be6-7996-40d0-be1d-eefda3f62418.png)
+
 
 -TEAM MEMBER:-
 
